@@ -1,9 +1,11 @@
+"use client";
+
 import React, { useEffect, useState } from 'react';
 import { usePlaygroundEngine } from './ui/hooks';
 import { PlaygroundEditor, HardwareRunner } from './ui/components';
 import { availablePlaygrounds, defaultPlaygroundConfig } from './config/base';
 
-const App = () => {
+const AppClient = () => {
   const {
     initialize,
     isInitialized,
@@ -40,7 +42,7 @@ const App = () => {
         <div style={{ flex: 1, padding: '10px' }}>
           <PlaygroundEditor
             config={currentConfig}
-            onExecute={executeCode as any}
+            onExecute={executeCode}
           />
         </div>
         <div style={{ flex: 1, padding: '10px', borderLeft: '1px solid #ccc' }}>
@@ -54,4 +56,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default AppClient;

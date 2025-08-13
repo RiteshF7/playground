@@ -1,11 +1,12 @@
 // Playground Engine Hook
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { PlaygroundEngine } from '../../playground/engine';
 import {
   PlaygroundConfiguration,
   BlockInstance,
   ExecutionResult,
-  ValidationResult
+  ValidationResult,
+  ModuleState
 } from '../../core/types';
 
 export const usePlaygroundEngine = () => {
@@ -14,6 +15,22 @@ export const usePlaygroundEngine = () => {
   const [isExecuting, setIsExecuting] = useState(false);
   const [lastResult, setLastResult] = useState<ExecutionResult | null>(null);
   const [currentConfig, setCurrentConfig] = useState<PlaygroundConfiguration | null>(null);
+  const [moduleStates, setModuleStates] = useState<Record<string, ModuleState | null>>({});
+
+  useEffect(() => {
+    const handleModuleStateChange = (newState: ModuleState) => {
+      setModuleStates(prevStates => ({
+        ...prevStates,
+        [newState.moduleId]: newState,
+      }));
+    };
+
+    engine.on('moduleStateChange', handleModuleStateChange);
+
+    return () => {
+      engine.off('moduleStateChange', handleModuleStateChange);
+    };
+  }, [engine]);
 
   const initialize = useCallback(async (config: PlaygroundConfiguration): Promise<ValidationResult> => {
     try {
@@ -33,7 +50,7 @@ export const usePlaygroundEngine = () => {
     }
   }, [engine]);
 
-  const executeBlocks = useCallback(async (blocks: BlockInstance[]): Promise<ExecutionResult> => {
+  const executeCode = useCallback(async (code: string, language: 'javascript' | 'python'): Promise<ExecutionResult> => {
     if (!isInitialized) {
       const errorResult: ExecutionResult = {
         success: false,
@@ -46,7 +63,7 @@ export const usePlaygroundEngine = () => {
 
     setIsExecuting(true);
     try {
-      const result = await engine.executeBlocks(blocks);
+      const result = await (engine as any).executeCode(code, language);
       setLastResult(result);
       return result;
     } finally {
@@ -66,12 +83,13 @@ export const usePlaygroundEngine = () => {
   return {
     engine,
     initialize,
-    executeBlocks,
+    executeCode,
     stopExecution,
     getStatus,
     isInitialized,
     isExecuting,
     lastResult,
-    currentConfig
+    currentConfig,
+    moduleStates,
   };
 };

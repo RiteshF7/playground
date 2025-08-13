@@ -106,6 +106,70 @@ export const defaultPlaygroundConfig: PlaygroundConfiguration = {
   ]
 };
 
+export const servoPlaygroundConfig: PlaygroundConfiguration = {
+  id: 'servo-playground',
+  name: 'Servo Motor Playground',
+  description: 'A playground for controlling a servo motor.',
+  version: '1.0.0',
+  editor: {
+    theme: AppConfig.DEFAULT_THEME,
+    toolbox: {
+      type: 'flyout',
+      categories: [
+        {
+          id: 'actuator',
+          name: 'Actuator',
+          color: '#FF6F61',
+          blocks: ['servo-set-angle'],
+          custom: false
+        },
+      ],
+      customBlocks: []
+    },
+    workspace: AppConfig.DEFAULT_WORKSPACE,
+    codeGeneration: {
+      targetLanguages: ['javascript', 'python'],
+      optimization: false,
+      includeComments: true,
+      formatting: {
+        indentation: '  ',
+        lineEndings: '\\n'
+      }
+    }
+  },
+  runner: {
+    executionMode: 'simulation',
+    simulationSettings: {
+      fps: 30,
+      realTimeExecution: true,
+      visualEffects: true,
+      debugMode: false
+    },
+    hardwareSettings: {
+      connectionType: 'serial',
+      baudRate: 115200,
+      timeout: 5000,
+      autoConnect: false,
+      reconnectAttempts: 3
+    },
+    validation: {
+      enableTestCases: true,
+      strictMode: false,
+      timeLimit: 30000,
+      memoryLimit: 1024 * 1024 // 1MB
+    }
+  },
+  hardware: [
+    AppConfig.HARDWARE_MODULES.SERVO
+  ],
+  testCases: []
+};
+
+export const availablePlaygrounds = [
+  defaultPlaygroundConfig,
+  servoPlaygroundConfig,
+];
+
 // Sample Curriculum Configuration
 export const sampleCurriculum: Curriculum = {
   id: 'beginner-electronics',

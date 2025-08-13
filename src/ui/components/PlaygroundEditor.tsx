@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { BlocklyComponent, Block, Value, Field, Shadow } from '@blockly/react';
+import { BlocklyWorkspace } from 'react-blockly';
 import Blockly from 'blockly';
 import { javascriptGenerator } from 'blockly/javascript';
 import { pythonGenerator } from 'blockly/python';
@@ -121,7 +121,7 @@ export const PlaygroundEditor: React.FC<PlaygroundEditorProps> = ({
         </select>
       </div>
       <div style={{ flex: 1 }}>
-        <BlocklyComponent
+        <BlocklyWorkspace
             readOnly={false}
             trashcan={true}
             media={'/media/blockly'}
@@ -131,10 +131,10 @@ export const PlaygroundEditor: React.FC<PlaygroundEditorProps> = ({
                 wheel: true
             }}
             initialXml={`<xml xmlns="https://developers.google.com/blockly/xml"></xml>`}
-            toolbox={toolbox}
+            toolboxConfiguration={toolbox}
             onWorkspaceChange={handleWorkspaceChange}
         >
-        </BlocklyComponent>
+        </BlocklyWorkspace>
       </div>
     </div>
   );

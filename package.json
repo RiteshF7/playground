@@ -10,16 +10,16 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "next": "14.2.3",
     "blockly": "^10.0.0",
-    "@blockly/react": "^9.0.0"
+    "next": "14.2.3",
+    "react": "^18.2.0",
+    "react-blockly": "^8.0.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/jest": "^29.5.0",
-    "@types/node": "^20.0.0",
-    "@types/react": "^18.2.0",
+    "@types/node": "20.19.10",
+    "@types/react": "18.3.23",
     "@types/react-dom": "^18.2.0",
     "eslint": "^8.50.0",
     "eslint-config-next": "14.2.3",
@@ -27,6 +27,6 @@
     "ts-jest": "^29.1.0",
     "ts-node": "^10.9.0",
     "tsc-watch": "^6.0.4",
-    "typescript": "^5.0.0"
+    "typescript": "5.9.2"
   }
 }

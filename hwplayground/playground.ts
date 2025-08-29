@@ -5,8 +5,8 @@ import {save, load} from './workspace/serialization';
 import {blocks, forJsBlock,forPyBlock} from "./workspace/blocks/blocks";
 import {blocklyOptions, BlocklyTheme} from './workspace/elgotheme';
 import {connectSerial, sendCodeToDevice} from "./webserial/webserial";
-import {getCodeCompletionCallback, initPlaygroundCommunication} from "@/utils/pg-comm-channel.util";
-import {Direction} from "@/features/playground/components/simulated-hardwares/modules/neopixel-display/types";
+import {getCodeCompletionCallback, initPlaygroundCommunication} from "../pg-comm-channel.util";
+import {Direction} from "./components/simulated-hardwares/modules/neopixel-display/types";
 
 initBlockly();
 

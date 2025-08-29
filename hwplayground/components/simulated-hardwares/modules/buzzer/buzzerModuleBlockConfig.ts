@@ -1,20 +1,20 @@
-import blockKeys from "@/utils/playground/workspace/blocks/blockKeys";
-import BlockKeys from "@/utils/playground/workspace/blocks/blockKeys";
+import blockKeys from "../../../../workspace/blocks/blockKeys";
+import BlockKeys from "../../../../workspace/blocks/blockKeys";
 
 // @ts-ignore
-import {getSimpleToolboxBlock} from "@/utils/playground/workspace/blocks/blocks";
-import {BuzzerState} from "@/features/playground/components/simulated-hardwares/modules/buzzer/Buzzer";
-import {getModuleState} from "@/features/playground/components/simulated-hardwares/utils/commonUtils";
-import {Modules} from "@/features/playground/components/simulated-hardwares/utils/modulesMap";
+import {getSimpleToolboxBlock} from "../../../../workspace/blocks/blocks";
+import {BuzzerState} from "./Buzzer";
+import {getModuleState} from "../../utils/commonUtils";
+import {Modules} from "../../utils/modulesMap";
 import ModuleConfigConstants
-    from "@/features/playground/components/simulated-hardwares/modules/common/moduleConfigConstants";
+    from "../common/moduleConfigConstants";
 import moduleConfigConstants
-    from "@/features/playground/components/simulated-hardwares/modules/common/moduleConfigConstants";
+    from "../common/moduleConfigConstants";
 import {
     pythonFunction, PythonFunctionKey,
     pythonImport,
     PythonImportKey, setPinValue
-} from "@/features/playground/components/simulated-hardwares/modules/common/commonModules";
+} from "../common/commonModules";
 
 
 //block definitions

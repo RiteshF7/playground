@@ -1,16 +1,16 @@
-import blockKeys from "@/utils/playground/workspace/blocks/blockKeys";
-import BlockKeys from "@/utils/playground/workspace/blocks/blockKeys";
-import {LedState} from "@/features/playground/components/simulated-hardwares/modules/led/Led";
+import blockKeys from "../../../../workspace/blocks/blockKeys";
+import BlockKeys from "../../../../workspace/blocks/blockKeys";
+import {LedState} from "./Led";
 // @ts-ignore
-import {Modules} from "@/features/playground/components/simulated-hardwares/utils/modulesMap";
-import {getModuleState} from "@/features/playground/components/simulated-hardwares/utils/commonUtils";
+import {Modules} from "../../utils/modulesMap";
+import {getModuleState} from "../../utils/commonUtils";
 import {
     pyDelay,
     pythonFunction,
     PythonFunctionKey,
     pythonImport,
     PythonImportKey, setPinValue
-} from "@/features/playground/components/simulated-hardwares/modules/common/commonModules";
+} from "../common/commonModules";
 
 //block definitions
 const blockDefinitions = {

@@ -1,12 +1,12 @@
 import React, {FC} from "react";
 import '@wokwi/elements';
 import {ControllerType, MatrixType, TestCase} from "./types";
-import {Button} from "@/features/common/components/button/Button";
+import {Button} from "../../../../playground/playground/components/common/Button";
 import {
     useNeoPixelViewModel
-} from "@/features/playground/components/simulated-hardwares/modules/neopixel-display/NeoPixelViewModel";
+} from "./NeoPixelViewModel";
 import {Zap} from "lucide-react";
-import RunButton from "@/features/playground/components/simulated-hardwares/utils/modulesMap";
+import RunButton from "../../utils/modulesMap";
 
 /*
  Test case 1 : move pixel right;

@@ -1,10 +1,9 @@
 'use client';
 import React, {FC, useEffect, useRef, useState} from "react";
-import {usePlayground} from "@/features/playground/providers/playground.provider";
-import {PlaygroundActions} from "@/features/playground/components/playground-actions/PlaygroundActions";
-import {getPlainToolBox, getSimpleToolboxBlock} from "@/utils/playground/workspace/blocks/blocks";
-import {Button} from "@/features/common/components/button/Button";
-import Dropdown from "@/features/common/DropDown";
+import {usePlayground} from "../../providers/playground.provider";
+import {PlaygroundActions} from "../playground-actions/PlaygroundActions";
+import {getPlainToolBox, getSimpleToolboxBlock} from "../../../../hwplayground/workspace/blocks/blocks";
+import {Button} from "../common/Button";
 
 interface PlaygroundEditorProps {
     editorConfig: any;

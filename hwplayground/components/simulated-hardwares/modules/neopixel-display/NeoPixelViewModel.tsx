@@ -4,11 +4,11 @@ import {calculateMove, isValidPosition} from "./NeoPixelUtils";
 import {ControllerType, Direction, MatrixType, TestCase} from "./types";
 import {NeopixelMatrixElement} from "@wokwi/elements";
 import {RGB} from "@wokwi/elements/dist/cjs/types/rgb";
-import {usePlayground} from "@/features/playground/providers/playground.provider";
+import {usePlayground} from "../../../../providers/playground.provider";
 import _ from 'lodash'
 import neopixelBlockConfig
-    from "@/features/playground/components/simulated-hardwares/modules/neopixel-display/neopixelBlockConfig";
-import {useModuleBaseViewModel} from "@/features/playground/components/simulated-hardwares/modules/neopixel-display/ModuleBaseViewModel";
+    from "./neopixelBlockConfig";
+import {useModuleBaseViewModel} from "./ModuleBaseViewModel";
 
 
 interface NeoPixelViewModelProps {

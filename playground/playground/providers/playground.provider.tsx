@@ -1,10 +1,10 @@
 import {createContext, FC, PropsWithChildren, useContext, useState} from "react";
-import {Playground} from "@/utils/playground/playground";
-import {ToolboxContainer} from "@/utils/playground/workspace/toolbox/toolboxContainer";
+import {Playground} from "../../../hwplayground/playground";
+import {ToolboxContainer} from "../../../hwplayground/workspace/toolbox/toolboxContainer";
 import {
     GlobalPGCommChannel,
     PlaygroundCommunicationChannel, RegisterPlaygroundComponent
-} from "@/utils/pg-comm-channel.util";
+} from "../../../pg-comm-channel.util";
 
 interface PlaygroundContextProps {
     playground: Playground | null;

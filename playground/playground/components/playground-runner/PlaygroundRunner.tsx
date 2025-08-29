@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import {getModule, Module, Modules} from "@/features/playground/components/simulated-hardwares/utils/modulesMap";
+import {getModule, Module, Modules} from "../simulated-hardwares/utils/modulesMap";
 
 interface PlaygroundRunnerProps {
     runnerConfig: any

@@ -6,15 +6,17 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
-      '@/components': path.resolve(__dirname, './src/components'),
-      '@/core': path.resolve(__dirname, './src/core'),
-      '@/types': path.resolve(__dirname, './src/types'),
-      '@/utils': path.resolve(__dirname, './src/utils'),
+      '@': path.resolve(__dirname, './'),
+      '@/components': path.resolve(__dirname, './playground/playground/components'),
+      '@/core': path.resolve(__dirname, './playground/playground'),
+      '@/types': path.resolve(__dirname, './playground/playground/components/simulated-hardwares/modules/neopixel-display/types'),
+      '@/utils': path.resolve(__dirname, './playground/playground'),
+      '@/features': path.resolve(__dirname, './playground/playground'),
+      '@/content': path.resolve(__dirname, './playground'),
     },
   },
   server: {
-    port: 3000,
+    port: 3001,
     host: true
   },
   build: {

@@ -1,6 +1,6 @@
-import blockKeys from "@/utils/playground/workspace/blocks/blockKeys";
-import BlockKeys from "@/utils/playground/workspace/blocks/blockKeys";
-import {Direction} from "@/features/playground/components/simulated-hardwares/modules/neopixel-display/types";
+import blockKeys from "../../../../workspace/blocks/blockKeys";
+import BlockKeys from "../../../../workspace/blocks/blockKeys";
+import {Direction} from "./types";
 //block definitions
 const blockDefinitions = {
 

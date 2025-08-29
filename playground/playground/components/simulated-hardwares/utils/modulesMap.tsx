@@ -1,19 +1,19 @@
 'use client'
 import {
     NeoPixelDirect
-} from "@/features/playground/components/simulated-hardwares/modules/neopixel-display/NeoPixelDirect";
-import {Buzzer} from "@/features/playground/components/simulated-hardwares/modules/buzzer/Buzzer";
+} from "../modules/neopixel-display/NeoPixelDirect";
+import {Buzzer} from "../modules/buzzer/Buzzer";
 import React, {FC, useState} from "react";
-import {usePlayground} from "@/features/playground/providers/playground.provider";
+import {usePlayground} from "../../../providers/playground.provider";
 import {
     runTestCases
-} from "@/features/playground/components/simulated-hardwares/utils/codeProcessor";
-import {Button} from "@/features/common/components/button/Button";
-import {Led} from "@/features/playground/components/simulated-hardwares/modules/led/Led";
-import {ServoMotor} from "@/features/playground/components/simulated-hardwares/modules/servo-motor/ServoMotor";
+} from "./codeProcessor";
+import {Button} from "../../common/Button";
+import {Led} from "../modules/led/Led";
+import {ServoMotor} from "../modules/servo-motor/ServoMotor";
 import {Block} from "blockly";
 import Blockly from "blockly/core";
-import {LCD} from "@/features/playground/components/simulated-hardwares/modules/LCD/LCD";
+import {LCD} from "../modules/LCD/LCD";
 import {Zap} from "lucide-react";
 
 export enum Modules {

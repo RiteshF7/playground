@@ -1,10 +1,10 @@
-import blockKeys from "@/utils/playground/workspace/blocks/blockKeys";
+import blockKeys from "../../../../workspace/blocks/blockKeys";
 
 import {
     pyDelay,
     pythonImport,
     PythonImportKey
-} from "@/features/playground/components/simulated-hardwares/modules/common/commonModules";
+} from "./commonModules";
 
 //block definitions
 const blockDefinitions = {

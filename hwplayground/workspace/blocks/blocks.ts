@@ -1,20 +1,20 @@
 import * as Blockly from 'blockly/core';
 import { Block, Generator } from 'blockly/core';
 
-import blockKeys from "@/utils/playground/workspace/blocks/blockKeys";
+import blockKeys from "./blockKeys";
 
 
 import neopixelBlockConfig
-    from "@/features/playground/components/simulated-hardwares/modules/neopixel-display/neopixelBlockConfig";
+    from "../../components/simulated-hardwares/modules/neopixel-display/neopixelBlockConfig";
 import ledModuleBlockConfig
-    from "@/features/playground/components/simulated-hardwares/modules/led/ledModuleBlockConfig";
+    from "../../components/simulated-hardwares/modules/led/ledModuleBlockConfig";
 import buzzerBlockConfig
-    from "@/features/playground/components/simulated-hardwares/modules/buzzer/buzzerModuleBlockConfig";
+    from "../../components/simulated-hardwares/modules/buzzer/buzzerModuleBlockConfig";
 import servoBlockConfig
-    from "@/features/playground/components/simulated-hardwares/modules/servo-motor/servoModuleBlockConfig";
-import inputsBlockConfig from "@/utils/playground/workspace/toolbox/core/inputs/inputsBlockConfig";
+    from "../../components/simulated-hardwares/modules/servo-motor/servoModuleBlockConfig";
+import inputsBlockConfig from "../toolbox/core/inputs/inputsBlockConfig";
 
-import delayBlockConfig from "@/features/playground/components/simulated-hardwares/modules/common/delayBlockConfig";
+import delayBlockConfig from "../../components/simulated-hardwares/modules/common/delayBlockConfig";
 
 interface BlockConfig {
     blockDefinitions?: { [key: string]: any };

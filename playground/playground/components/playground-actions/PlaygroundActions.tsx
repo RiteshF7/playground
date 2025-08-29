@@ -1,6 +1,6 @@
 import {FC} from "react";
-import {Button} from "@/features/common/components/button/Button";
-import {usePlayground} from "@/features/playground/providers/playground.provider";
+import {Button} from "../common/Button";
+import {usePlayground} from "../../providers/playground.provider";
 
 
 export const PlaygroundActions: FC = () => {

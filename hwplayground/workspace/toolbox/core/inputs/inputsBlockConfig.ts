@@ -1,10 +1,10 @@
-import blockKeys from "@/utils/playground/workspace/blocks/blockKeys";
-import BlockKeys from "@/utils/playground/workspace/blocks/blockKeys";
-import {LedState} from "@/features/playground/components/simulated-hardwares/modules/led/Led";
+import blockKeys from "../../../blocks/blockKeys";
+import BlockKeys from "../../../blocks/blockKeys";
+import {LedState} from "../../../components/simulated-hardwares/modules/led/Led";
 // @ts-ignore
-import {getSimpleToolboxBlock} from "@/utils/playground/workspace/blocks/blocks";
-import {Modules} from "@/features/playground/components/simulated-hardwares/utils/modulesMap";
-import {getModuleState} from "@/features/playground/components/simulated-hardwares/utils/commonUtils";
+import {getSimpleToolboxBlock} from "../../../blocks/blocks";
+import {Modules} from "../../../components/simulated-hardwares/utils/modulesMap";
+import {getModuleState} from "../../../components/simulated-hardwares/utils/commonUtils";
 import Blockly from "blockly/core";
 import {JavaScript} from "blockly";
 import {Order} from "blockly/javascript";

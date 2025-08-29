@@ -1,4 +1,4 @@
-import {usePlayground} from "@/features/playground/providers/playground.provider";
+import {usePlayground} from "../../../../providers/playground.provider";
 import _ from "lodash";
 
 interface ModuleBaseViewModelProps {

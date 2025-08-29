@@ -1,0 +1,67 @@
+{
+  "id": "neopixel-rainbow",
+  "title": "NeoPixel Rainbow Effect",
+  "description": "Create a rainbow effect using NeoPixel strips",
+  "type": "virtual",
+  "problemStatement": "Create a rainbow effect that cycles through different colors on the NeoPixel strip. Each pixel should show a different color from the rainbow spectrum.",
+  "requiredBlocks": ["neopixel_set_color", "neopixel_clear", "delay", "controls_for"],
+  "components": [
+    {
+      "id": "neopixel1",
+      "type": "neopixel",
+      "name": "NeoPixel Strip",
+      "pins": [
+        { "id": "pin1", "type": "digital", "number": 2, "mode": "output" }
+      ],
+      "properties": [
+        { "name": "pixelCount", "type": "number", "value": 8, "min": 1, "max": 144 },
+        { "name": "brightness", "type": "number", "value": 50, "min": 0, "max": 255 }
+      ],
+      "simulation": {
+        "visualRepresentation": {
+          "type": "svg",
+          "data": {
+            "rect": {
+              "x": 10,
+              "y": 10,
+              "width": 200,
+              "height": 20,
+              "fill": "#000",
+              "stroke": "#333",
+              "strokeWidth": 1
+            }
+          }
+        },
+        "behavior": {
+          "type": "neopixel",
+          "parameters": {
+            "pin": 2,
+            "pixelCount": 8,
+            "brightness": 50
+          }
+        }
+      }
+    }
+  ],
+  "testCases": [
+    {
+      "id": "rainbow_test",
+      "description": "NeoPixel should display rainbow colors",
+      "expectedOutput": {
+        "neopixel1": {
+          "pixels": [
+            { "r": 255, "g": 0, "b": 0 },
+            { "r": 255, "g": 127, "b": 0 },
+            { "r": 255, "g": 255, "b": 0 },
+            { "r": 0, "g": 255, "b": 0 },
+            { "r": 0, "g": 0, "b": 255 },
+            { "r": 75, "g": 0, "b": 130 },
+            { "r": 148, "g": 0, "b": 211 },
+            { "r": 255, "g": 0, "b": 255 }
+          ]
+        }
+      },
+      "timeout": 5000
+    }
+  ]
+}
